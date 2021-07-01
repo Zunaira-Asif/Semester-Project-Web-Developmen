@@ -1,6 +1,12 @@
-const mongoose = require("mongoose");
+// const mongoose = require("mongoose");
 
-const shoesSchema = new mongoose.Schema({});
-const Shoes = mongoose.model('Shoes', shoesSchema, 'shoes');
+// const shoesSchema = new mongoose.Schema({
+//     "Shoe Name": String,
+//     "Shoe Type": String,
+//     "Shoe Color": String,
+//     "Price": String,
+//     "In Stock": Boolean
+// });
+// const Shoes = mongoose.model('Shoes', shoesSchema, 'shoes');
 
-module.exports = Shoes;
+// module.exports = Shoes;
