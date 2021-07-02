@@ -1,1 +1,81 @@
-<p>create-shoe works!</p>
+<div class="container">
+    <form>
+      <div class="form-group row">
+        <label for="shoeName" class="col-sm-1-12 col-form-label"></label>
+        <div class="col-sm-1-12">
+          <input
+            type="text"
+            class="form-control"
+            name="shoeName"
+            id="shoeName"
+            placeholder="Enter Shoe Name"
+          />
+        </div>
+
+        <label for="shoeType" class="col-sm-1-12 col-form-label"></label>
+        <div class="col-sm-1-12">
+          <input
+            type="text"
+            class="form-control"
+            name="shoeType"
+            id="shoeType"
+            placeholder="Enter Shoe Type"
+          />
+        </div>
+
+        <label for="shoeColor" class="col-sm-1-12 col-form-label"></label>
+        <div class="col-sm-1-12">
+          <input
+            type="text"
+            class="form-control"
+            name="shoeColor"
+            id="shoeColor"
+            placeholder="Enter Shoe Color"
+          />
+        </div>
+
+        <label for="shoePrice" class="col-sm-1-12 col-form-label"></label>
+        <div class="col-sm-1-12">
+          <input
+            type="number"
+            class="form-control"
+            name="shoePrice"
+            id="shoePrice"
+            placeholder="Enter Shoe Price"
+          />
+        </div>
+
+        <label for="inStock" class="col-sm-1-12 col-form-label"></label>
+        <div class="col-sm-1-12">
+          In Stock?
+
+          <div class="form-check form-check-inline">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="inlineRadioOptions"
+              id="stockYes"
+              value="Yes"
+            />
+            <label class="form-check-label" for="stockYes">Yes</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="inlineRadioOptions"
+              id="stockNo"
+              value="No"
+            />
+            <label class="form-check-label" for="stockNo">No</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <div class="offset-sm-2 col-sm-10">
+          <button type="submit" class="btn btn-primary">Action</button>
+        </div>
+      </div>
+    </form>
+  </div>

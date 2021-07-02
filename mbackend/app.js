@@ -1,10 +1,18 @@
 const express = require('express');
 const mongoose = require('mongoose');
+const bodyParser = require('body-parser');
 const cors = require("cors");
 
 
+
+
+
 const app = express();
-//const port = process.env.PORT || 3000;
+app.use(express.json());
+app.use(express.urlencoded({
+    extended: true
+  }));
+
 var server = app.listen(3000, function() {
     console.log(new Date().toISOString() + ": server started on port 3000");
 });
@@ -19,7 +27,7 @@ app.use(function(req, res, next) {
 
 mongoose
 .connect(
-    'mongodb+srv://madmin:helloworld@fswdproject.ejwg7.mongodb.net/myFirstDatabase?retryWrites=true&w=majority/shoeDB',
+    'mongodb://localhost:27017/ShoeDB',
     {
         useNewUrlParser:true,
         useUnifiedTopology:true,
@@ -27,9 +35,50 @@ mongoose
     ).then(()=>
     {
         console.log('Mongodb connected...');
+        
+        
+        
+        
     });
 
-var db = mongoose.connection;
+    
+
+    const shoesSchema = new mongoose.Schema({
+    "ShoeName": String,
+    "ShoeType": String,
+    "ShoeColor": String,
+    "Price": String,
+    "InStock": Boolean
+});
+
+var shoesModel=mongoose.model('shoes',shoesSchema);
+
+
+app.get('/getShoes', async (req, res) => {
+    
+    try {
+        const shoes= await shoesModel.find();
+        res.status(200).json(shoes);
+    } catch(err) {
+        res.status(500).json(err);
+    }
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

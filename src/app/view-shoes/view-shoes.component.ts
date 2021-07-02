@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient,HttpHeaders } from '@angular/common/http';
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-view-shoes',
@@ -7,9 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ViewShoesComponent implements OnInit {
 
-  constructor() { }
+  shoes=[];
+  constructor
+  (
+    private dataService:DataService
+  ) { }
 
   ngOnInit(): void {
+    this.dataService.getShoesRequest().subscribe((data:any[])=>
+    {
+      console.log("Let's see if this fetches any thing");
+      console.log(data);
+      this.shoes=data;
+    });
   }
+
+
 
 }
