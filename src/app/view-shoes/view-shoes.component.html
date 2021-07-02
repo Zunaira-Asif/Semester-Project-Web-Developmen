@@ -1,21 +1,23 @@
-<table class="table">
-    <thead>
-        <tr>
-            <th>Shoe Name</th>
-            <th>Shoe Type</th>
-            <th>Shoe Color</th>
-            <th>Shoe Price</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let shoe of shoes">
-            <!-- <td scope="row"></td> -->
-            <td>{{shoe.ShoeName}}</td>
-            <td>{{shoe.ShoeType}}</td>
-            <td>{{shoe.ShoeColor}}</td>
-            <td>${{shoe.Price}}</td>
-
-        </tr>
-        
-    </tbody>
-</table>
+<div class="container">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Shoe Name</th>
+                <th>Shoe Type</th>
+                <th>Shoe Color</th>
+                <th>Shoe Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let shoe of shoes">
+                <!-- <td scope="row"></td> -->
+                <td>{{shoe.ShoeName}}</td>
+                <td>{{shoe.ShoeType}}</td>
+                <td>{{shoe.ShoeColor}}</td>
+                <td>${{shoe.Price}}</td>
+    
+            </tr>
+            
+        </tbody>
+    </table>
+</div>
