@@ -35,6 +35,7 @@ mongoose
     ).then(()=>
     {
         console.log('Mongodb connected...');
+        app.use(express.json());
         
         
         
@@ -62,6 +63,19 @@ app.get('/getShoes', async (req, res) => {
     } catch(err) {
         res.status(500).json(err);
     }
+});
+
+app.post('/createShoe',async(req,res)=>
+{
+    const post=new Post(
+        {
+            ShoeName:req.body.ShoeName,
+            ShoeType:req.body.ShoeType,
+            ShoeColor:req.body.ShoeColor,
+            Price:req.body.ShoePrice
+        })
+        await post.save()
+        res.send(post)
 });
 
 

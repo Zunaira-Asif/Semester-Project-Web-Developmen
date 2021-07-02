@@ -13,4 +13,9 @@ export class DataService {
   {
     return this.httpClient.get(this.LOCAL_API_SERVER+'/getShoes/')
   }
+
+  public postShoesRequest()
+  {
+    return this.httpClient.get(this.LOCAL_API_SERVER+'/createShoe/')
+  }
 }

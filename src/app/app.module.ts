@@ -9,6 +9,7 @@ import { CreateShoeComponent } from './create-shoe/create-shoe.component';
 import { ViewShoesComponent } from './view-shoes/view-shoes.component';
 import { DeleteShoeComponent } from './delete-shoe/delete-shoe.component';
 import { UpdateShoesComponent } from './update-shoes/update-shoes.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { UpdateShoesComponent } from './update-shoes/update-shoes.component';
   imports: [
     BrowserModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
